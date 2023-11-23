@@ -1,8 +1,7 @@
+from config import REQUEST_DB_CONNECTION_STRING
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-
-from config import REQUEST_DB_CONNECTION_STRING
 
 SQLALCHEMY_DATABASE_URL = REQUEST_DB_CONNECTION_STRING
 
