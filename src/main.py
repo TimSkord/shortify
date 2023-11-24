@@ -1,13 +1,13 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
+from fastapi.responses import JSONResponse
+
+from router import router
 
 app = FastAPI()
+app.include_router(router)
 
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
-
-
-@app.get("/hello/{name}")
-async def say_hello(name: str):
-    return {"message": f"Hello {name}"}
+@app.exception_handler(HTTPException)
+async def url_not_found_exception_handler(request, exc):
+    if exc.status_code == 404:
+        return JSONResponse(status_code=404, content={"message": "URL not found"})
