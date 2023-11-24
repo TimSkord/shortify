@@ -1,11 +1,23 @@
 # Test your FastAPI endpoints
 
-GET http://127.0.0.1:8000/
-Accept: application/json
+### Creating a URL object
+POST http://localhost:8000/
+Content-Type: application/json
+
+{
+  "full_url": "https://example.com"
+}
 
 ###
 
-GET http://127.0.0.1:8000/hello/User
-Accept: application/json
+### Redirect to full URL ###
+GET http://localhost:8000/c984/
+Content-Type: application/json
+
+###
+
+### Deleting a URL object ###
+DELETE http://localhost:8000/c984/
+Content-Type: application/json
 
 ###
