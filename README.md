@@ -6,12 +6,13 @@ A service for shortening links.
 
 1. Make sure you have Docker and Docker-Compose installed correctly.
 2. Clone the repository to your device and navigate to the project folder.
-3. Run the command to build and run the project:
+3. Rename `.env.example` to `.env`.
+4. Run the command to build and run the project:
     ```bash
    sudo docker-compose up --build
    ```
-4. Expect an infinitely long build load.
-5. Congratulations, you are great, you can move on to the **Usage** section.
+5. Expect an infinitely long build load.
+6. Congratulations, you are great, you can move on to the **Usage** section.
 
 ## **Usage**
 
